@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grão Nobre</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            color: #292d32;
+        }
+
+        .navbar-brand span {
+            color: #a87543;
+        }
+
+        .btn-cafe {
+            background-color: #95683d;
+            color: white;
+        }
+
+        .btn-cafe:hover {
+            background-color: #79532f;
+            color: white;
+        }
+
+        .hero {
+            padding: 50px 0;
+        }
+
+        .imagem-hero {
+            height: 300px;
+            background-color: #d8bd96;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #79664e;
+            font-size: 12px;
+        }
+
+        .depoimentos {
+            padding: 40px 0;
+        }
+
+        .subtitulo {
+            color: #95683d;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .estrelas {
+            color: #ffb400;
+        }
+
+        .faq {
+            padding: 35px 0;
+        }
+
+        .faq .accordion {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        footer {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Grão<span>Nobre</span></a>
+
+            <div class="navbar-nav flex-row align-items-center gap-2">
+                <a class="nav-link" href="#inicio">Início</a>
+                <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+
+                <button class="btn btn-cafe btn-sm" data-bs-toggle="modal" data-bs-target="#compra">
+                    Comprar agora
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero bg-light">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <h1 class="fw-bold display-5">
+                        Café de origem, torrado com propósito.
+                    </h1>
+
+                    <p class="text-secondary">
+                        A Grão Nobre trabalha com pequenos produtores para levar até você cafés especiais, selecionados com cuidado e qualidade.
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="imagem-hero">
+                        IMAGEM HERO
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos text-center">
+        <span class="subtitulo">QUEM JÁ EXPERIMENTOU</span>
+        <h2 class="fw-bold">O que dizem nossos clientes</h2>
+
+        <div class="mt-4">
+            <p class="estrelas">★★★★★</p>
+            <p class="fst-italic">
+                "Melhor café que já experimentei. Chega sempre fresquinho."
+            </p>
+            <strong>Marina Alves</strong>
+            <p class="text-secondary small">Cliente desde 2023</p>
+        </div>
+    </section>
+
+    <section id="faq" class="faq bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Perguntas frequentes</h2>
+
+            <div class="accordion" id="perguntas">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+                            Qual a validade do café após aberto?
+                        </button>
+                    </h2>
+
+                    <div id="p1" class="accordion-collapse collapse" data-bs-parent="#perguntas">
+                        <div class="accordion-body">
+                            Recomendamos manter o café bem fechado em local seco e fresco.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+                            Vocês entregam para todo o Brasil?
+                        </button>
+                    </h2>
+
+                    <div id="p2" class="accordion-collapse collapse show" data-bs-parent="#perguntas">
+                        <div class="accordion-body">
+                            Sim! Enviamos para todas as regiões do Brasil.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3">
+                            Posso cancelar minha assinatura?
+                        </button>
+                    </h2>
+
+                    <div id="p3" class="accordion-collapse collapse" data-bs-parent="#perguntas">
+                        <div class="accordion-body">
+                            Sim! Você pode solicitar o cancelamento quando quiser.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light text-center p-3">
+        <p class="mb-0">© 2026 Grão Nobre. Marca fictícia para fins didáticos.</p>
+    </footer>
+
+    <div class="modal fade" id="compra" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModal">Faça seu pedido:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="kit">
+                        <label class="form-check-label" for="kit">
+                            Kit de degustação
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="pacote">
+                        <label class="form-check-label" for="pacote">
+                            1 pacote de 250g
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="pacotes">
+                        <label class="form-check-label" for="pacotes">
+                            5 pacotes de 250g
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">
+                        Ir para o carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
